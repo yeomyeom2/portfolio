@@ -1,0 +1,74 @@
+/* GCP WD_WP Team. Author : Hyejin Yeom 2020-06-11 */
+
+$border : 1px solid #dcdcdc;
+$color-c2s : #ff273b;
+
+.GCWcontents	{width:920px;margin:0 auto;padding-top:50px;}
+
+.list-social	{
+	padding:20px 0 10px;border-top:$border;border-bottom:$border;
+	li	{
+		width:280px;float:left;margin:0 0 10px 10px;padding:9px;border:$border;
+		&:nth-child(3n+1)	{margin-left:0;}
+		&:hover, &:focus, &:active	{border:1px solid $color-c2s;}
+
+		.pic	{width:278px;height:232px;margin-bottom:15px;border:1px solid #f4f4f4;}
+		.pic img	{width:100%;height:100%;}
+		.subject	{height:52px;text-overflow:ellipsis;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;word-wrap:break-word;}
+		.subject a	{width:100%;height:100%;display:table;font-size:18px;line-height:26px;color:#454545;text-decoration:none;}
+		.subject a span	{display:table-cell;padding:0 10px;vertical-align:middle;}
+		.date	{display:block;padding:12px 10px 15px;font-size:16px;line-height:26px;color:#b7b7b7;}
+	}
+	&:after	{content:'';clear:both;display:block;}
+}
+
+
+/* board view */
+.board-view dl	{
+	border-top:2px solid $color-c2s;border-bottom:$border;
+	dt	{
+		position:relative;padding:18px 150px 18px 30px;font-size:16px;line-height:26px;color:#454545;border-bottom:$border;background-color:#f8f8f8;
+		.date	{width:150px;height:26px;position:absolute;top:50%;right:0;margin-top:-13px;text-align:center;}
+	}
+	dd	{
+		border-bottom:$border;
+		&.attached_file	{
+			position:relative;padding:16px 40px 16px 136px;
+			.add	{
+				position:absolute;top:16px;left:27px;padding:0 25px 0 10px;font-size:16px;line-height:26px;color:#454545;
+				&:after	{width:4px;height:4px;content:'';position:absolute;top:11px;left:0;background-position:right 0;}
+			}
+			a	{
+				position:relative;display:block;padding-left:20px;font-size:14px;line-height:26px;color:#b0b0b0;text-decoration:none;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;
+				&:after	{width:1px;height:10px;content:'';position:absolute;top:8px;left:0;background-color:#eaeaea;}
+			}
+		}
+		
+		&.article	{
+			padding:30px;overflow:hidden;text-align:center;
+			img	{max-width:100% !important;height:auto !important;}
+			p	{margin-bottom:25px;text-align:left;}
+		}
+	}
+}
+
+/* board paging */
+.board_paging	{padding-top:50px;text-align:center;}
+.board_paging a	{width:28px;height:28px;display:inline-block;margin-right:1px;font-size:12px;line-height:28px;text-decoration:none;border:1px solid #e2e2e2;background-color:#fff;vertical-align: top;}
+.board_paging a.current	{color:#fff;border:1px solid $color-c2s;background-color:$color-c2s;}
+.board_paging a.disabled	{pointer-events:none;}
+.board_paging a.prev	{background-image:url('https://image-glb.qpyou.cn/markup/img/gcw/c_ko/sub_v3.png');background-repeat: no-repeat;background-size: 200px 360px;background-position:0 0;font:0/0 a;}
+.board_paging a.prev.on	{border:1px solid $color-c2s;background-position:-30px 0;}
+.board_paging a.next	{background-image:url('https://image-glb.qpyou.cn/markup/img/gcw/c_ko/sub_v3.png');background-repeat: no-repeat;background-size: 200px 360px;background-position:0 -30px;font:0/0 a;}
+.board_paging a.next.on	{border:1px solid $color-c2s;background-position:-30px -30px;}
+
+/* board foot */
+.board_foot	{margin-top:10px;}
+.board_foot a	{text-decoration:none;}
+.board_foot .prev	{width:40px;height:40px;display:inline-block;margin-right:3px;background-position:0 -60px;}
+.board_foot .prev:hover, .board_foot .prev:focus, .board_foot .prev:active	{background-position:-50px -60px;}
+.board_foot .next	{width:40px;height:40px;display:inline-block;margin-right:3px;background-position:-100px -60px;}
+.board_foot .next:hover, .board_foot .next:focus, .board_foot .next:active	{background-position:-150px -60px;}
+.board_foot .btn_base	{float:right;}
+.btn_base, .btn_cancel	{min-width:100px;height:40px;display:inline-block;padding:0 20px;font-size:14px;line-height:40px;color:#666;text-align:center;text-decoration:none;vertical-align:top;cursor:pointer;border:0;background-color:#eee;}
+.btn_base:hover, .btn_base:focus, .btn_base:active	{color:#fff;background-color:$color-c2s;}
