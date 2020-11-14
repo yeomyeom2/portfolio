@@ -7,10 +7,9 @@ const SocialCont = (props) => {
 	const socialId = match.params.id;
 	const [socialData, setSocialData] = useState([]);
 
-	console.log()
 	useEffect(() => {
 		const apiSocial = async () => {
-			const response = await axios.get(`//test-idback.withhive.com/test/api/getCom2usCompanyInfo/social?id=${socialId}`);
+			const response = await axios.get(`https://test-idback.withhive.com/test/api/getCom2usCompanyInfo/social?id=${socialId}`);
 			setSocialData(response.data.data[0]);
 		};
 		apiSocial();
@@ -25,7 +24,7 @@ const SocialCont = (props) => {
 				</dl>
 			</div>
 			<div className="board_foot">
-				<Link to="/portfolio/gcw/social" className="btn_base">목록보기</Link>
+				<Link to="/gcw" className="btn_base">목록보기</Link>
 			</div>
 		</div>
 	);

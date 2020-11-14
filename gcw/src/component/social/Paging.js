@@ -15,7 +15,7 @@ const Paging = (props) => {
 
 	let lastPage = pageSize * pageGroup; //마지막 페이지
 	(lastPage > totalPage) && (lastPage = totalPage)
-	console.log("lastPage:", lastPage);
+	//console.log("lastPage:", lastPage);
 
 	let firstPage = 0;
 	(lastPage%pageSize === 0) ? (firstPage = lastPage - (pageSize-1)) : (firstPage = lastPage - (pageSize-2));
@@ -31,7 +31,7 @@ const Paging = (props) => {
 	const createBtn = () => {
 		let btn = [];
 		for(let i = firstPage ; i <= lastPage ; i++) {
-			btn.push(<Link to='/portfolio/gcw/social' key={i} className={currentPage === i ? 'current' : ''}
+			btn.push(<Link to='/gcw' key={i} className={currentPage === i ? 'current' : ''}
 				onClick={() => store.dispatch({type:'PAGE_CHANGE', pageNum: i})}
 			>{i}</Link>);
 		}
@@ -40,11 +40,11 @@ const Paging = (props) => {
 
 	return (
 		<div className="board_paging">
-			<Link to='/portfolio/gcw/social' className={['prev', (pageGroup>=totalGroup) ? 'on' : 'disabled'].join(' ')}
+			<Link to='/gcw' className={['prev', (pageGroup>=totalGroup) ? 'on' : 'disabled'].join(' ')}
 				onClick={() => store.dispatch({type:'PAGE_CHANGE', pageNum: prevPage})}
 			>이전 페이지로</Link>
 			{createBtn()}
-			<Link to='/portfolio/gcw/social' className={['next', (pageGroup<totalGroup) ? 'on' : 'disabled'].join(' ')}
+			<Link to='/gcw' className={['next', (pageGroup<totalGroup) ? 'on' : 'disabled'].join(' ')}
 				onClick={() => store.dispatch({type:'PAGE_CHANGE', pageNum: nextPage})}
 			>다음 페이지로</Link>
 		</div>
