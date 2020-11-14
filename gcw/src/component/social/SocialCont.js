@@ -10,7 +10,7 @@ const SocialCont = (props) => {
 	console.log()
 	useEffect(() => {
 		const apiSocial = async () => {
-			const response = await axios.get(`https://test-idback.withhive.com/test/api/getCom2usCompanyInfo/social?id=${socialId}`);
+			const response = await axios.get(`//test-idback.withhive.com/test/api/getCom2usCompanyInfo/social?id=${socialId}`);
 			setSocialData(response.data.data[0]);
 		};
 		apiSocial();
