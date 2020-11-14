@@ -14,7 +14,7 @@ const SocialList = () => {
 	useEffect(() => {
 		const apiSocial = async () => {
 			try {
-				const response = await axios.get(`http://test-idback.withhive.com/test/api/getCom2usCompanyInfo/social?lang=ko&pagenum=${pageNum}&pagesize=${pageSize}`);
+				const response = await axios.get(`https://test-idback.withhive.com/test/api/getCom2usCompanyInfo/social?lang=ko&pagenum=${pageNum}&pagesize=${pageSize}`);
 				setSocialData(response.data.data);
 				setPageTotal(response.data.totalCount);
 			}catch {
